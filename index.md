@@ -2,6 +2,8 @@
 title: capsicum
 ---
 
+<img src="/logo.png" alt="capsicum" width="256" height="128">
+
 # capsicum
 
 Mastodon / Misskey 対応の Fediverse クライアントアプリです。iPhone / iPad / Android に対応しています。
