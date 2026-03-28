@@ -73,8 +73,9 @@ iOS 版は App Store 審査中です。
 
 ## ロードマップ
 
-- [**v1.9**](https://github.com/pooza/capsicum/milestone/13) — 表示カスタマイズ + モロヘイヤ連携強化（絶対時間表示・画像ぼかし設定・投稿前確認・プレビュー・リスト改善・予約投稿タグ編集 等）
-- [**v1.8**](https://github.com/pooza/capsicum/milestone/12) — UX 改善・Misskey 固有機能（公開範囲デフォルト・isCat・アンテナ・通知統合一覧・DM タイムライン・サーバー情報画面 等）
+- [**v1.10**](https://github.com/pooza/capsicum/milestone/14) — モロヘイヤ連携強化・Misskey 固有機能・大型機能（メディアカタログ・アンテナ・ドライブ管理・通知統合一覧・NowPlaying 等）
+- [**v1.9**](https://github.com/pooza/capsicum/milestone/13) — 表示カスタマイズ + モロヘイヤ連携（絶対時間表示・画像ぼかし設定・投稿前確認・リスト改善・予約投稿タグ編集 等）
+- [**v1.8**](https://github.com/pooza/capsicum/milestone/12) — UX 改善・バグ修正（isCat・DM タイムライン・公開範囲デフォルト・引用許可範囲指定・サーバー情報画面・検索強化 等）
 
 詳細は [GitHub Milestones](https://github.com/pooza/capsicum/milestones) をご覧ください。
 
