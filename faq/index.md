@@ -24,7 +24,7 @@ Windows 版は自己署名 MSIX 形式で配布しており、インストール
 
 ## Linux 版で日本語入力ができません
 
-`ibus-mozc` 等の ibus 経路は動作確認済みです。`fcitx5` / `uim` 用の immodule も AppImage に同梱していますが、開発環境外のため **best-effort** とさせてください。動作しない場合は ibus 経由でご利用ください。
+`ibus-mozc` 等の ibus 経路は動作確認済みです。`fcitx5` 経路も外部ユーザーから動作報告をいただいています。`uim` 用の immodule も AppImage に同梱していますが、開発環境外のため **best-effort** とさせてください。動作しない場合は ibus か fcitx5 経由でご利用ください。
 
 ibus 経路で動作しない場合は、`~/.local/share/capsicum/logs/` のログとあわせて [PieFed コミュニティ](https://pf.korako.me/c/capsicum) または GitHub Issues にご報告ください。
 

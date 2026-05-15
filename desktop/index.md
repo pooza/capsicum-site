@@ -33,7 +33,7 @@ chmod +x capsicum-*.AppImage
 
 **Flathub** への配信も並行して準備中です（[初回提出はテンプレ違反で差し戻し済み、再提出方針検討中](https://github.com/pooza/capsicum/issues/424)）。採択後は `flatpak install` でもインストール可能になります。
 
-**日本語入力について**: `ibus-mozc` 等の ibus 経路は動作確認済みです。`fcitx5` / `uim` 用の immodule も同梱していますが、開発環境外のため **best-effort** とさせてください。動作しない場合は ibus 経由でご利用ください。
+**日本語入力について**: `ibus-mozc` 等の ibus 経路は動作確認済みです。`fcitx5` 経路も外部ユーザーから動作報告をいただいています。`uim` 用の immodule も同梱していますが、開発環境外のため **best-effort** とさせてください。動作しない場合は ibus か fcitx5 経由でご利用ください。
 
 ### Windows
 
