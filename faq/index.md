@@ -20,7 +20,7 @@ title: FAQ - capsicum
 
 Windows 版は自己署名 MSIX 形式で配布しており、インストール前に自己署名証明書を信頼ストアに import する必要があります。PowerShell を管理者として実行し、`capsicum-signing.cer` を import してから `capsicum.msix` をインストールしてください。詳細な手順は [packaging/windows/INSTALL.md](https://github.com/pooza/capsicum/blob/main/packaging/windows/INSTALL.md) を参照してください。
 
-⚠️ 配布対象は「証明書 import を厭わない上級ユーザー」です。中期的には OV コード署名証明書を取得し、SmartScreen 通過する形式に格上げ予定です。Microsoft Store 公開は法人化対応待ちで当面保留しています。
+⚠️ 配布対象は「証明書 import を厭わない上級ユーザー」です。Microsoft Store 公開を Partner Center の手動 publish ルートで **v1.27 での再開を目指しており**、これが成立すれば証明書 import なしで一般の Windows ユーザーがインストールできるようになります。
 
 ## Linux 版で日本語入力ができません
 
