@@ -12,15 +12,15 @@ title: FAQ - capsicum
 
 - **macOS**: [Mac App Store](https://apps.apple.com/jp/app/capsicum/id6760206608) から無償で配信中です。macOS 11.5 以降が必要です
 - **Linux**: [GitHub Releases](https://github.com/pooza/capsicum/releases/latest) から AppImage をダウンロードしてご利用ください。Flathub への配信も準備中です
-- **Windows**: [GitHub Releases](https://github.com/pooza/capsicum/releases/latest) から MSIX をダウンロードしてご利用ください
+- **Windows**: [Microsoft Store](https://apps.microsoft.com/detail/9np2gr7m2w6p) から無償で配信中です（v1.27 で公開）。Store 公開前の先行配布や証明書 import を厭わない上級者向けに、[GitHub Releases](https://github.com/pooza/capsicum/releases/latest) からの自己署名 MSIX 直配も継続しています
 
 各プラットフォームの導入方法・既知の制約は [デスクトップ版について](/desktop) を参照してください。
 
 ## Windows 版のインストールがうまくいきません
 
-Windows 版は自己署名 MSIX 形式で配布しており、インストール前に自己署名証明書を信頼ストアに import する必要があります。PowerShell を管理者として実行し、`capsicum-signing.cer` を import してから `capsicum.msix` をインストールしてください。詳細な手順は [packaging/windows/INSTALL.md](https://github.com/pooza/capsicum/blob/main/packaging/windows/INSTALL.md) を参照してください。
+通常は [Microsoft Store](https://apps.microsoft.com/detail/9np2gr7m2w6p) からインストールしてください。証明書 import の手間なく一般の Windows ユーザーがそのまま導入できます。
 
-⚠️ 配布対象は「証明書 import を厭わない上級ユーザー」です。Microsoft Store 公開を Partner Center の手動 publish ルートで **v1.27 での再開を目指しており**、これが成立すれば証明書 import なしで一般の Windows ユーザーがインストールできるようになります。
+GitHub Releases の自己署名 MSIX 直配を使う場合（Store 公開前の先行検証など）は、インストール前に自己署名証明書を信頼ストアに import する必要があります。PowerShell を管理者として実行し、`capsicum-signing.cer` を import してから `capsicum.msix` をインストールしてください。詳細な手順は [packaging/windows/INSTALL.md](https://github.com/pooza/capsicum/blob/main/packaging/windows/INSTALL.md) を参照してください。
 
 ## Linux 版で日本語入力ができません
 

@@ -37,20 +37,19 @@ chmod +x capsicum-*.AppImage
 
 ### Windows
 
-[![Windows MSIX](https://img.shields.io/badge/Windows-MSIX-000000?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/pooza/capsicum/releases/latest)
+[![Get it from Microsoft](https://img.shields.io/badge/Get_it_from-Microsoft-000000?style=for-the-badge&logo=microsoft&logoColor=white)](https://apps.microsoft.com/detail/9np2gr7m2w6p)
 
-**v1.25 から初回配布開始**。[Microsoft Store 公開](https://github.com/pooza/capsicum/issues/544)は Partner Center の Web UI から手動 publish するルートで **v1.27 での再開を目指しています**。それまでは GitHub Releases 経由の **自己署名 MSIX 直配** となります。
-
-⚠️ 配布対象は「証明書 import を厭わない上級ユーザー」です。インストール時に PowerShell の管理者実行で自己署名証明書を信頼ストアに import する必要があります。
-
-詳細な手順は [packaging/windows/INSTALL.md](https://github.com/pooza/capsicum/blob/main/packaging/windows/INSTALL.md) を参照してください。
+**Microsoft Store** から無償で配信中（v1.25 で初回配布開始、v1.27 で Store 公開達成）。証明書 import の手間なく、一般の Windows ユーザーがそのままインストールできます。
 
 動作要件:
 
 - Windows 10 (1809 以降) / Windows 11 x64
-- 管理者権限（証明書 import + MSIX install のため、初回のみ）
 
-**改善の見通し**: [Microsoft Store 公開（#544）](https://github.com/pooza/capsicum/issues/544)が v1.27 で成立すれば、証明書 import なしで一般の Windows ユーザーがインストールできるようになります。これが主ルートです。コード署名証明書の取得（[#534](https://github.com/pooza/capsicum/issues/534)）は、Store 公開の成否を見届けてから判断する保留扱いとしています（Store 経由が主ルートになれば証明書は不要、詰まった場合の代替路線）。
+#### GitHub Releases 経由の自己署名 MSIX 直配（補助・上級者向け）
+
+Store publish 完了前の先行検証や、証明書 import を厭わないユーザー向けに、[GitHub Releases](https://github.com/pooza/capsicum/releases/latest) からの自己署名 MSIX 直配も継続しています。インストール時に PowerShell の管理者実行で自己署名証明書を信頼ストアに import する必要があります（詳細な手順は [packaging/windows/INSTALL.md](https://github.com/pooza/capsicum/blob/main/packaging/windows/INSTALL.md)）。
+
+コード署名証明書の取得（[#534](https://github.com/pooza/capsicum/issues/534)）は、Microsoft Store 公開達成により当面不要となっています（Store 経由は MS 側で再署名されるため、自己署名のまま submit 可）。
 
 ## プラットフォーム別の現状
 
@@ -58,7 +57,7 @@ chmod +x capsicum-*.AppImage
 | --- | --- | --- | --- | --- |
 | macOS | Mac App Store | v1.30 で対応予定（共通経路 [#569](https://github.com/pooza/capsicum/issues/569) + ネイティブ [#468](https://github.com/pooza/capsicum/issues/468)） | Share Extension | ○ |
 | Linux | AppImage / Flathub | v1.30 で対応予定（3 OS 共通経路 [#569](https://github.com/pooza/capsicum/issues/569)） | 対応外 | △ ([#492](https://github.com/pooza/capsicum/issues/492)、v1.30 で改善予定) |
-| Windows | MSIX 自己署名直配 | v1.30 で対応予定（共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）。ネイティブ WNS は保留 ([#474](https://github.com/pooza/capsicum/issues/474)) | 対応外 | △ ([#492](https://github.com/pooza/capsicum/issues/492)、v1.30 で改善予定) |
+| Windows | Microsoft Store + MSIX 自己署名直配 | v1.30 で対応予定（共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）。ネイティブ WNS は保留 ([#474](https://github.com/pooza/capsicum/issues/474)) | 対応外 | △ ([#492](https://github.com/pooza/capsicum/issues/492)、v1.30 で改善予定) |
 
 「ナウプレ共有」は他アプリの「共有」メニューから capsicum を呼び出して投稿する機能です。OS の共有 API が必要なため、現状は macOS のみで完成しています。
 
@@ -72,7 +71,7 @@ chmod +x capsicum-*.AppImage
 
 ## ロードマップ（デスクトップ関連）
 
-- **v1.27** — Windows の Microsoft Store 公開（Partner Center 手動 publish ルートで再開）、Flathub manifest の自動更新
+- **v1.27** — Windows の Microsoft Store 公開（Partner Center 手動 publish ルート、2026-05-20 達成済み）
 - **v1.30** — macOS push 通知の本配線（capsicum-relay 拡張）、デスクトップ 3 OS 共通の通知経路、Linux / Windows での動画再生改善、ドラッグ＆ドロップ添付などの UX 改善
 - **v1.32** — デスクトップ / パッケージング周りの構造整理（リファクタ集約）
 - **v1.33** — プレイヤー横断ナウプレ取得（Linux MPRIS / Windows SMTC / Spotify 連携）
