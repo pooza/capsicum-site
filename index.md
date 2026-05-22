@@ -103,7 +103,7 @@ Windows の [Microsoft Store 公開](https://apps.microsoft.com/detail/9np2gr7m2
 
 v1.18〜v1.19 でプッシュ通知リレーを導入・ホットフィックスを経て実運用に乗せ、v1.20 では Misskey ネイティブペイロード対応・バックグラウンド / キル状態での通知内容の個別表示・中継サーバー側の観測性強化などを完了し、プッシュ通知機能を「完成」状態に仕上げました。v1.21 で macOS ネイティブビルドの土台が完成し、v1.22 で Misskey の新メッセージ機能に対応、v1.23 でデスクトップ展開のための通知・タスク・メディア抽象化を完了、v1.24 で Linux 版を初公開、v1.25 で Windows 版を初公開、v1.26 で番組表・エピソードブラウザからの Annict 感想投稿に対応しました。
 
-v1.27 では、Windows の Microsoft Store 公開を Partner Center の手動 publish ルートで成立させ（[apps.microsoft.com](https://apps.microsoft.com/detail/9np2gr7m2w6p)）、あわせて投げ銭型サポーターサブスクリプションに取り組んでいます。これからは、v1.28 で Misskey グループチャット、v1.29 でプリセットサーバー向けのお知らせ通知配信、v1.30 で macOS push 通知の本配線とデスクトップの通知・動画・UX 改善を予定しています。その先では、プレイヤー横断のナウプレ取得（v1.33）にも取り組みます。
+v1.27 では、Windows の Microsoft Store 公開を Partner Center の手動 publish ルートで成立させ（[apps.microsoft.com](https://apps.microsoft.com/detail/9np2gr7m2w6p)）、あわせて投げ銭型サポーターサブスクリプションを実装しました。これからは、v1.28 で Misskey グループチャット、v1.29 でプリセットサーバー向けのお知らせ通知配信、v1.30 で macOS push 通知の本配線とデスクトップの通知・動画・UX 改善を予定しています。その先では、プレイヤー横断のナウプレ取得（v1.33）にも取り組みます。
 
 詳細は [GitHub Milestones](https://github.com/pooza/capsicum/milestones) をご覧ください。
 
