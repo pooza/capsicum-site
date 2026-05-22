@@ -18,7 +18,7 @@ title: プリセットサーバーについて - capsicum
 | [ダイスキー](https://misskey.delmulin.com) | Misskey | ダイの大冒険 |
 | [きゅあすきー](https://mk.precure.fun) | Misskey | プリキュア |
 
-きゅあすきーのみ、運営者は開発者 pooza ではありません。キュアスタ！の運営にも携わり、capsicum・モロヘイヤにも日頃から意見を寄せてくれる、共同管理人に近い立場の方が運営しています。
+きゅあすきーのみ、運営者は開発者 pooza ではありません。キュアスタ！の運営にも携わり、capsicum・[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)にも日頃から意見を寄せてくれる、共同管理人に近い立場の方が運営しています。
 
 ## プリセットサーバーに登録するには
 
