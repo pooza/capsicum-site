@@ -6,19 +6,20 @@ title: プッシュ通知について - capsicum
 
 ## 概要
 
-capsicum v1.18 より、Mastodon / Misskey サーバーからのプッシュ通知に対応しました。開発者が運営するリレーサーバーを経由して、リアルタイムの通知を端末に届けます。v1.20 では、Misskey ネイティブの通知ペイロード対応、バックグラウンド / キル状態での通知内容の個別表示など残課題を消化し、プッシュ通知機能を「完成」状態に仕上げました。
+capsicum v1.18 より、Mastodon / Misskey サーバーからのプッシュ通知に対応しました。開発者が運営するリレーサーバーを経由して、リアルタイムの通知を端末に届けます。
+v1.20 では、Misskey ネイティブの通知ペイロード対応、バックグラウンド / キル状態での通知内容の個別表示など残課題を消化し、プッシュ通知機能を「完成」状態に仕上げました。
 
 ## 利用対象
 
-プッシュ通知は、capsicum の[プリセットサーバー](/preset-servers)にアカウントをお持ちの方に無償で提供します。capsicum は本来プリセットサーバーのユーザーに向けて開発されたアプリで、プッシュ通知もこの方針に沿い、プリセットサーバーのアカウントをひとつでも登録しているユーザーを対象とします。プリセットサーバー以外のユーザーに対しては、将来的に有償での提供を予定しています。
+プッシュ通知は、capsicum の[プリセットサーバー](/preset-servers)にアカウントをお持ちの方に無償で提供します。capsicum は本来[プリセットサーバー](/preset-servers)のユーザーに向けて開発されたアプリで、プッシュ通知もこの方針に沿い、[プリセットサーバー](/preset-servers)のアカウントをひとつでも登録しているユーザーを対象とします。[プリセットサーバー](/preset-servers)以外のユーザーに対しては、将来的に有償での提供を予定しています。
 
-現在プリセットサーバーにアカウントをお持ちでない方も、サーバーに登録すれば対象になります。プリセットサーバーの一覧と登録方法は[プリセットサーバーについて](/preset-servers)をご覧ください。
+現在[プリセットサーバー](/preset-servers)にアカウントをお持ちでない方も、サーバーに登録すれば対象になります。プリセットサーバーの一覧と登録方法は[プリセットサーバーについて](/preset-servers)をご覧ください。
 
 ## Mastodon と Misskey の違い
 
 Mastodon はサードパーティアプリからのプッシュ通知登録を公式にサポートしており、capsicum からそのまま利用できます。
 
-Misskey はプッシュ通知の登録 API がサードパーティアプリに公式には開かれていないという上流側の制約があります。capsicum では v1.20 より、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)導入済みサーバー（ダイスキー・きゅあすきー等）において、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)側のプロキシエンドポイント経由でこの制約を回避し、Misskey でもプッシュ通知を受け取れるようにしました。[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)未導入の Misskey サーバーや、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)が古いバージョンのサーバーでは有効化できない場合があります。
+Misskey には本来、プッシュ通知の登録 API がサードパーティアプリから行えないという制約があります。capsicum では v1.20 より、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)導入済みサーバー（[ダイスキー](https://misskey.delmulin.com)・[きゅあすきー](https://mk.precure.fun)等）において、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)側のプロキシエンドポイント経由でこの制約を回避し、Misskey でもプッシュ通知を受け取れるようにしました。[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)未導入の Misskey サーバーや、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)が古いバージョンのサーバーでは有効化できない場合があります。
 
 ## プライバシー
 
