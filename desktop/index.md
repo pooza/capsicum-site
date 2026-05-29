@@ -31,7 +31,7 @@ chmod +x capsicum-*.AppImage
 ./capsicum-*.AppImage
 ```
 
-**Flathub への配信は断念しました**。Flathub への提出 PR がメンテナにより [Generative AI policy 抵触として block](https://github.com/pooza/capsicum/issues/604) され、capsicum は実質 AI 製である関係上、再提出は永久 ban のリスクがあるため、AppImage 単独運用に方針を切り替えています。今後は AppImage の体験改善（[アプリ一覧への統合インストールスクリプト](https://github.com/pooza/capsicum/issues/640)・[新版通知](https://github.com/pooza/capsicum/issues/641)）に注力します。
+**Flathub への配信は断念しました**。 (https://github.com/pooza/capsicum/issues/604) 今後は AppImage 単独運用に方針を切り替え、 AppImage の体験改善（[アプリ一覧への統合インストールスクリプト](https://github.com/pooza/capsicum/issues/640)・[新版通知](https://github.com/pooza/capsicum/issues/641)）に注力します。
 
 **日本語入力について**: `ibus-mozc` 等の ibus 経路は動作確認済みです。`fcitx5` 経路も外部ユーザーから動作報告をいただいています。`uim` 用の immodule も同梱していますが、開発環境外のため **best-effort** とさせてください。動作しない場合は ibus か fcitx5 経由でご利用ください。
 
