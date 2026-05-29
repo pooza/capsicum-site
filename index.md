@@ -103,7 +103,7 @@ v1.18〜v1.19 でプッシュ通知リレーを導入・ホットフィックス
 
 これからは、v1.30 で Linux / Windows の動画再生対応を含むデスクトップの基盤強化を予定しています。その先では、タイムラインへのタッチ操作の段階的有効化（v1.31）、プレイヤー横断のナウプレ取得（v1.33）、デスクトップ 3 OS の通知本配線（v1.34）にも取り組みます。
 
-なお、Linux 配布は **AppImage 単独**で運用します。Flathub への配信は[一度準備しましたが断念しました](https://github.com/pooza/capsicum/issues/604)。今後は AppImage の体験改善に集中します。
+なお、Linux 配布は **AppImage 単独**で運用します。Flathub への配信は一度準備しましたが断念しました。今後は AppImage の体験改善に集中します。
 
 詳細は [GitHub Milestones](https://github.com/pooza/capsicum/milestones) をご覧ください。
 
