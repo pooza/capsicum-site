@@ -6,7 +6,7 @@ title: デスクトップ版について - capsicum
 
 capsicum は iOS / Android のモバイル版に加え、macOS / Linux / Windows のデスクトップ版にも段階的に展開しています。動機は、iOS 版を Mac 上で実況用途に使って得た手応えです。
 
-すべてのプラットフォームで、モバイル版と同じ Flutter コードベースから配信しています。UI はウィンドウ幅に応じて自動でレスポンシブに切り替わり、Finder / ファイラー起点のメディア添付、再生中の曲を投稿フォームに挿入する[ナウプレ取得](/now-playing)（Linux / Windows、v1.33〜）、共有メニューからの[ナウプレ共有](/now-playing)（macOS）といったネイティブな体験を取り入れています。
+すべてのプラットフォームで、モバイル版と同じ Flutter コードベースから配信しています。UI はウィンドウ幅に応じて自動でレスポンシブに切り替わり、Finder / ファイラー起点のメディア添付、再生中の曲を投稿フォームに挿入する[ナウプレ取得](/now-playing)（Linux / Windows、v1.33〜）、共有メニューからの[ナウプレ共有](/now-playing)（macOS）、アプリ起動中の[通知](/push-notification)を OS のローカル通知に表示する仕組み（3 OS 共通、macOS はネイティブ push にも対応、v1.34〜）といったネイティブな体験を取り入れています。
 
 ## 配布チャネルとインストール
 
@@ -104,9 +104,9 @@ Store publish 完了前の先行検証や、最新ビルドをいち早く試し
 
 | | 配布 | 通知 | ナウプレ取得 | ナウプレ共有 | 動画再生 |
 | --- | --- | --- | --- | --- | --- |
-| macOS | Mac App Store | v1.34 で対応予定（共通経路 [#569](https://github.com/pooza/capsicum/issues/569) + ネイティブ [#468](https://github.com/pooza/capsicum/issues/468)） | [v1.37 で対応予定（Apple Music #668）](https://github.com/pooza/capsicum/issues/668) | Share Extension | ○ |
-| Linux | AppImage | v1.34 で対応予定（3 OS 共通経路 [#569](https://github.com/pooza/capsicum/issues/569)） | **v1.33 で対応（MPRIS [#466](https://github.com/pooza/capsicum/issues/466)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
-| Windows | Microsoft Store + MSIX 自己署名直配 | v1.34 で対応予定（共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）。ネイティブ WNS は保留 ([#474](https://github.com/pooza/capsicum/issues/474)) | **v1.33 で対応（SMTC [#484](https://github.com/pooza/capsicum/issues/484)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
+| macOS | Mac App Store | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569) + ネイティブ APNs [#468](https://github.com/pooza/capsicum/issues/468)）** | [v1.37 で対応予定（Apple Music #668）](https://github.com/pooza/capsicum/issues/668) | Share Extension | ○ |
+| Linux | AppImage | **v1.34 で対応（3 OS 共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）** | **v1.33 で対応（MPRIS [#466](https://github.com/pooza/capsicum/issues/466)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
+| Windows | Microsoft Store + MSIX 自己署名直配 | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）**。ネイティブ WNS は保留 ([#474](https://github.com/pooza/capsicum/issues/474)) | **v1.33 で対応（SMTC [#484](https://github.com/pooza/capsicum/issues/484)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
 
 「ナウプレ取得」は投稿フォームの ♪ ボタンから、OS が把握している再生中の曲を直接取得して挿入する機能です（v1.33 でデスクトップに追加）。「ナウプレ共有」は他アプリの「共有」メニューから capsicum を呼び出して投稿する機能で、OS の共有 API が必要なため現状は macOS のみで完成しています。詳しくは [ナウプレについて](/now-playing) を参照してください。
 
