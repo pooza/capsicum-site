@@ -76,7 +76,7 @@ curl -fsSL https://capsicum.shrieker.net/uninstall.sh | bash
 
 #### GitHub Releases 経由の自己署名 MSIX 直配（補助・上級者向け）
 
-Store publish 完了前の先行検証や、最新ビルドをいち早く試したいユーザー向けに、[GitHub Releases](https://github.com/pooza/capsicum/releases/latest) からの自己署名 MSIX 直配も継続しています。自己署名のため、インストール前に証明書を信頼ストアへ登録する必要があります。
+一般のユーザーには、証明書 import の不要な **Microsoft Store** からの導入を推奨します。Store を利用できない環境など限られたケース向けに、[GitHub Releases](https://github.com/pooza/capsicum/releases/latest) からの自己署名 MSIX 直配も残しています。自己署名のため、インストール前に証明書を信頼ストアへ登録する必要があります。
 
 1. Release アセットから 2 ファイルをダウンロード
    - `capsicum.msix` — アプリ本体
@@ -98,7 +98,7 @@ Store publish 完了前の先行検証や、最新ビルドをいち早く試し
 
 アンインストールは「設定 → アプリ」から。証明書も消す場合は `Cert:\LocalMachine\TrustedPeople` から該当エントリを削除します。証明書 import は初回のみで、以降の更新では不要です（[詳細手順](https://github.com/pooza/capsicum/blob/main/packaging/windows/INSTALL.md)）。
 
-コード署名証明書の取得（[#534](https://github.com/pooza/capsicum/issues/534)）は、Microsoft Store 公開達成により当面不要です（Store 経由は MS 側で再署名されるため、自己署名のまま submit 可）。
+なお Store 経由の配布は Microsoft 側で再署名されるため、独自のコード署名証明書はこの直配補助ルートにしか関係しません。
 
 ## プラットフォーム別の現状
 
@@ -106,7 +106,7 @@ Store publish 完了前の先行検証や、最新ビルドをいち早く試し
 | --- | --- | --- | --- | --- | --- |
 | macOS | Mac App Store | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569) + ネイティブ APNs [#468](https://github.com/pooza/capsicum/issues/468)）** | [v1.37 で対応予定（Apple Music #668）](https://github.com/pooza/capsicum/issues/668) | Share Extension | ○ |
 | Linux | AppImage | **v1.34 で対応（3 OS 共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）** | **v1.33 で対応（MPRIS [#466](https://github.com/pooza/capsicum/issues/466)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
-| Windows | Microsoft Store + MSIX 自己署名直配 | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）**。ネイティブ WNS は保留 ([#474](https://github.com/pooza/capsicum/issues/474)) | **v1.33 で対応（SMTC [#484](https://github.com/pooza/capsicum/issues/484)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
+| Windows | Microsoft Store | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）**。ネイティブ WNS は保留 ([#474](https://github.com/pooza/capsicum/issues/474)) | **v1.33 で対応（SMTC [#484](https://github.com/pooza/capsicum/issues/484)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
 
 「ナウプレ取得」は投稿フォームの ♪ ボタンから、OS が把握している再生中の曲を直接取得して挿入する機能です（v1.33 でデスクトップに追加）。「ナウプレ共有」は他アプリの「共有」メニューから capsicum を呼び出して投稿する機能で、OS の共有 API が必要なため現状は macOS のみで完成しています。詳しくは [ナウプレについて](/now-playing) を参照してください。
 
