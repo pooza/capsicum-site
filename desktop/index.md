@@ -106,7 +106,7 @@ curl -fsSL https://capsicum.shrieker.net/uninstall.sh | bash
 | --- | --- | --- | --- | --- | --- |
 | macOS | Mac App Store | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569) + ネイティブ APNs [#468](https://github.com/pooza/capsicum/issues/468)）** | [v1.37 で対応予定（Apple Music #668）](https://github.com/pooza/capsicum/issues/668) | Share Extension | ○ |
 | Linux | AppImage | **v1.34 で対応（3 OS 共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）** | **v1.33 で対応（MPRIS [#466](https://github.com/pooza/capsicum/issues/466)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
-| Windows | Microsoft Store | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）**。ネイティブ WNS は保留 ([#474](https://github.com/pooza/capsicum/issues/474)) | **v1.33 で対応（SMTC [#484](https://github.com/pooza/capsicum/issues/484)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
+| Windows | Microsoft Store | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）**。ネイティブ WNS は対応予定 ([#474](https://github.com/pooza/capsicum/issues/474)) | **v1.33 で対応（SMTC [#484](https://github.com/pooza/capsicum/issues/484)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
 
 「ナウプレ取得」は投稿フォームの ♪ ボタンから、OS が把握している再生中の曲を直接取得して挿入する機能です（v1.33 でデスクトップに追加）。「ナウプレ共有」は他アプリの「共有」メニューから capsicum を呼び出して投稿する機能で、OS の共有 API が必要なため現状は macOS のみで完成しています。詳しくは [ナウプレについて](/now-playing) を参照してください。
 
@@ -120,11 +120,10 @@ curl -fsSL https://capsicum.shrieker.net/uninstall.sh | bash
 
 ## ロードマップ（デスクトップ関連）
 
-- **v1.34** — **デスクトップ 3 OS の通知本配線** — Mastodon `user` stream / Misskey `main` channel を WebSocket で受けて OS のローカル通知に流す共通経路（[#569](https://github.com/pooza/capsicum/issues/569)）と、macOS のネイティブ push 通知（APNs 経由、[#468](https://github.com/pooza/capsicum/issues/468)）を同テーマで実装
-- **v1.36** — Misskey チャット / ページの続編機能と、投げ銭（サポーター）の macOS / Windows 横展開
 - **v1.37** — [ナウプレ取得](/now-playing)を iOS / macOS の Apple Music へ横展開（[#668](https://github.com/pooza/capsicum/issues/668)）
 - **v1.38** — [ナウプレ取得](/now-playing)を Spotify 連携（OAuth 経由）へ拡大（[#570](https://github.com/pooza/capsicum/issues/570)）
+- **今後** — Windows のネイティブ通知（WNS）対応（[#474](https://github.com/pooza/capsicum/issues/474)）。アプリ終了中でも通知を届けられるようにする
 
-直近の達成: v1.27 で Windows の Microsoft Store 公開（Partner Center 手動 publish ルート、2026-05-20 審査通過）、v1.28 で Misskey のグループチャット対応、v1.29 で[プリセットサーバー](/preset-servers)向けのお知らせ通知配信。Linux 配布は Flathub 提出を断念し AppImage 単独運用に確定（2026-05-29、[#604](https://github.com/pooza/capsicum/issues/604)）。v1.30 で Linux / Windows の動画再生に対応（[media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)）し、あわせて Linux AppImage のデスクトップ統合インストール（[#640](https://github.com/pooza/capsicum/issues/640)）・直配チャネルの新版通知（[#641](https://github.com/pooza/capsicum/issues/641)）・ドラッグ＆ドロップ添付などのデスクトップ UX を強化。v1.32 でデスクトップ / パッケージング周りの構造整理（リファクタ集約）を完了。**v1.33 で[ナウプレ取得](/now-playing)（再生中の曲を投稿フォームに挿入）に対応しました — Linux は MPRIS（[#466](https://github.com/pooza/capsicum/issues/466)）、Windows は SMTC（[#484](https://github.com/pooza/capsicum/issues/484)）。**整形はクライアント側で行うため、モロヘイヤ未導入のサーバーでも動作します。
+直近の達成: v1.27 で Windows の Microsoft Store 公開（Partner Center 手動 publish ルート、2026-05-20 審査通過）、v1.28 で Misskey のグループチャット対応、v1.29 で[プリセットサーバー](/preset-servers)向けのお知らせ通知配信。Linux 配布は Flathub 提出を断念し AppImage 単独運用に確定（2026-05-29、[#604](https://github.com/pooza/capsicum/issues/604)）。v1.30 で Linux / Windows の動画再生に対応（[media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)）し、あわせて Linux AppImage のデスクトップ統合インストール（[#640](https://github.com/pooza/capsicum/issues/640)）・直配チャネルの新版通知（[#641](https://github.com/pooza/capsicum/issues/641)）・ドラッグ＆ドロップ添付などのデスクトップ UX を強化。v1.32 でデスクトップ / パッケージング周りの構造整理（リファクタ集約）を完了。**v1.33 で[ナウプレ取得](/now-playing)（再生中の曲を投稿フォームに挿入）に対応しました — Linux は MPRIS（[#466](https://github.com/pooza/capsicum/issues/466)）、Windows は SMTC（[#484](https://github.com/pooza/capsicum/issues/484)）。**整形はクライアント側で行うため、モロヘイヤ未導入のサーバーでも動作します。**v1.34 でデスクトップ 3 OS の[通知](/push-notification)本配線（アプリ起動中の WebSocket streaming → OS のローカル通知、macOS はネイティブ APNs も）を完了**し、**v1.36 で投げ銭（サポーター）を macOS の Mac App Store に横展開**しました。
 
 詳細は [GitHub Milestones](https://github.com/pooza/capsicum/milestones) を参照してください。
