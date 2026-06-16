@@ -6,7 +6,7 @@ title: デスクトップ版について - capsicum
 
 capsicum は iOS / Android のモバイル版に加え、macOS / Linux / Windows のデスクトップ版にも段階的に展開しています。動機は、iOS 版を Mac 上で実況用途に使って得た手応えです。
 
-すべてのプラットフォームで、モバイル版と同じ Flutter コードベースから配信しています。UI はウィンドウ幅に応じて自動でレスポンシブに切り替わり、Finder / ファイラー起点のメディア添付、再生中の曲を投稿フォームに挿入する[ナウプレ取得](/now-playing)（Linux / Windows、v1.33〜）、共有メニューからの[ナウプレ共有](/now-playing)（macOS）、アプリ起動中の[通知](/push-notification)を OS のローカル通知に表示する仕組み（3 OS 共通、macOS はネイティブ push にも対応、v1.34〜）といったネイティブな体験を取り入れています。
+すべてのプラットフォームで、モバイル版と同じ Flutter コードベースから配信しています。UI はウィンドウ幅に応じて自動でレスポンシブに切り替わり、Finder / ファイラー起点のメディア添付、再生中の曲を投稿フォームに挿入する[ナウプレ取得](/now-playing)（Linux / Windows は v1.33〜、macOS の Apple Music は v1.37〜）、共有メニューからの[ナウプレ共有](/now-playing)（macOS）、アプリ起動中の[通知](/push-notification)を OS のローカル通知に表示する仕組み（3 OS 共通、macOS はネイティブ push にも対応、v1.34〜）といったネイティブな体験を取り入れています。
 
 ## 配布チャネルとインストール
 
@@ -104,7 +104,7 @@ curl -fsSL https://capsicum.shrieker.net/uninstall.sh | bash
 
 | | 配布 | 通知 | ナウプレ取得 | ナウプレ共有 | 動画再生 |
 | --- | --- | --- | --- | --- | --- |
-| macOS | Mac App Store | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569) + ネイティブ APNs [#468](https://github.com/pooza/capsicum/issues/468)）** | [v1.37 で対応予定（Apple Music #668）](https://github.com/pooza/capsicum/issues/668) | Share Extension | ○ |
+| macOS | Mac App Store | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569) + ネイティブ APNs [#468](https://github.com/pooza/capsicum/issues/468)）** | **v1.37 で対応（Apple Music [#668](https://github.com/pooza/capsicum/issues/668)）** | Share Extension | ○ |
 | Linux | AppImage | **v1.34 で対応（3 OS 共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）** | **v1.33 で対応（MPRIS [#466](https://github.com/pooza/capsicum/issues/466)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
 | Windows | Microsoft Store | **v1.34 で対応（共通経路 [#569](https://github.com/pooza/capsicum/issues/569)）**。ネイティブ WNS は対応予定 ([#474](https://github.com/pooza/capsicum/issues/474)) | **v1.33 で対応（SMTC [#484](https://github.com/pooza/capsicum/issues/484)）** | 対応外 | ○ (v1.30 で [media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)) |
 
@@ -120,10 +120,9 @@ curl -fsSL https://capsicum.shrieker.net/uninstall.sh | bash
 
 ## ロードマップ（デスクトップ関連）
 
-- **v1.37** — [ナウプレ取得](/now-playing)を iOS / macOS の Apple Music へ横展開（[#668](https://github.com/pooza/capsicum/issues/668)）
 - **v1.38** — [ナウプレ取得](/now-playing)を Spotify 連携（OAuth 経由）へ拡大（[#570](https://github.com/pooza/capsicum/issues/570)）
-- **今後** — Windows のネイティブ通知（WNS）対応（[#474](https://github.com/pooza/capsicum/issues/474)）。アプリ終了中でも通知を届けられるようにする
+- **v1.40** — Windows 版の仕上げ。アプリ終了中でも通知を届けるネイティブ WNS プッシュ通知（[#474](https://github.com/pooza/capsicum/issues/474)）と、投げ銭（サポーター）の購入導線（[#599](https://github.com/pooza/capsicum/issues/599)）に対応
 
-直近の達成: v1.27 で Windows の Microsoft Store 公開（Partner Center 手動 publish ルート、2026-05-20 審査通過）、v1.28 で Misskey のグループチャット対応、v1.29 で[プリセットサーバー](/preset-servers)向けのお知らせ通知配信。Linux 配布は Flathub 提出を断念し AppImage 単独運用に確定（2026-05-29、[#604](https://github.com/pooza/capsicum/issues/604)）。v1.30 で Linux / Windows の動画再生に対応（[media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)）し、あわせて Linux AppImage のデスクトップ統合インストール（[#640](https://github.com/pooza/capsicum/issues/640)）・直配チャネルの新版通知（[#641](https://github.com/pooza/capsicum/issues/641)）・ドラッグ＆ドロップ添付などのデスクトップ UX を強化。v1.32 でデスクトップ / パッケージング周りの構造整理（リファクタ集約）を完了。**v1.33 で[ナウプレ取得](/now-playing)（再生中の曲を投稿フォームに挿入）に対応しました — Linux は MPRIS（[#466](https://github.com/pooza/capsicum/issues/466)）、Windows は SMTC（[#484](https://github.com/pooza/capsicum/issues/484)）。**整形はクライアント側で行うため、モロヘイヤ未導入のサーバーでも動作します。**v1.34 でデスクトップ 3 OS の[通知](/push-notification)本配線（アプリ起動中の WebSocket streaming → OS のローカル通知、macOS はネイティブ APNs も）を完了**し、**v1.36 で投げ銭（サポーター）を macOS の Mac App Store に横展開**しました。
+直近の達成: v1.27 で Windows の Microsoft Store 公開（Partner Center 手動 publish ルート、2026-05-20 審査通過）、v1.28 で Misskey のグループチャット対応、v1.29 で[プリセットサーバー](/preset-servers)向けのお知らせ通知配信。Linux 配布は Flathub 提出を断念し AppImage 単独運用に確定（2026-05-29、[#604](https://github.com/pooza/capsicum/issues/604)）。v1.30 で Linux / Windows の動画再生に対応（[media_kit 移行 #492](https://github.com/pooza/capsicum/issues/492)）し、あわせて Linux AppImage のデスクトップ統合インストール（[#640](https://github.com/pooza/capsicum/issues/640)）・直配チャネルの新版通知（[#641](https://github.com/pooza/capsicum/issues/641)）・ドラッグ＆ドロップ添付などのデスクトップ UX を強化。v1.32 でデスクトップ / パッケージング周りの構造整理（リファクタ集約）を完了。**v1.33 で[ナウプレ取得](/now-playing)（再生中の曲を投稿フォームに挿入）に対応しました — Linux は MPRIS（[#466](https://github.com/pooza/capsicum/issues/466)）、Windows は SMTC（[#484](https://github.com/pooza/capsicum/issues/484)）。**整形はクライアント側で行うため、モロヘイヤ未導入のサーバーでも動作します。**v1.34 でデスクトップ 3 OS の[通知](/push-notification)本配線（アプリ起動中の WebSocket streaming → OS のローカル通知、macOS はネイティブ APNs も）を完了**し、**v1.36 で投げ銭（サポーター）を macOS の Mac App Store に横展開**、**v1.37 で macOS の[ナウプレ取得](/now-playing)を Apple Music に対応**しました。
 
 詳細は [GitHub Milestones](https://github.com/pooza/capsicum/milestones) を参照してください。
