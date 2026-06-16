@@ -61,7 +61,7 @@ v1.34 では、デスクトップ版（macOS / Linux / Windows）でも通知を
 iOS / Android のモバイル版に加え、macOS / Linux / Windows のデスクトップ版にも段階的に展開しています。
 
 - **macOS** — Mac App Store で配信中。Universal Purchase により iOS / iPadOS と同一の App として提供しています
-- **Linux** — AppImage を GitHub Releases から即時配布
+- **Linux** — ワンライナー `curl -fsSL https://capsicum.shrieker.net/install.sh | bash` で導入（AppImage は GitHub Releases から即時配布）
 - **Windows** — [Microsoft Store](https://apps.microsoft.com/detail/9np2gr7m2w6p) から配信中（v1.27 で公開）。証明書 import 不要でそのままインストールできます（GitHub Releases 経由の自己署名 MSIX 直配も残していますが、証明書登録が必要な上級者向けの補助です）
 
 各プラットフォームの導入方法・既知の制約・ロードマップは [デスクトップ版について](/desktop) を参照してください。
