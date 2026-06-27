@@ -1,13 +1,12 @@
 ---
-title: プッシュ通知について - capsicum
+title: プッシュ通知 - capsicum
 ---
 
-# プッシュ通知について
+# プッシュ通知
 
 ## 概要
 
 capsicum v1.18 より、Mastodon / Misskey サーバーからのプッシュ通知に対応しました。開発者が運営するリレーサーバーを経由して、リアルタイムの通知を端末に届けます。
-v1.20 では、Misskey ネイティブの通知ペイロード対応、バックグラウンド / キル状態での通知内容の個別表示など残課題を消化し、プッシュ通知機能を「完成」状態に仕上げました。
 
 ## 利用対象
 
@@ -19,15 +18,23 @@ v1.20 では、Misskey ネイティブの通知ペイロード対応、バック
 
 Mastodon はサードパーティアプリからのプッシュ通知登録を公式にサポートしており、capsicum からそのまま利用できます。
 
-Misskey には本来、プッシュ通知の登録 API がサードパーティアプリから行えないという制約があります。capsicum では v1.20 より、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)導入済みサーバー（[ダイスキー](https://misskey.delmulin.com)・[きゅあすきー](https://mk.precure.fun)等）において、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)側のプロキシエンドポイント経由でこの制約を回避し、Misskey でもプッシュ通知を受け取れるようにしました。[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)未導入の Misskey サーバーや、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)が古いバージョンのサーバーでは有効化できない場合があります。
+Misskey には本来、プッシュ通知の登録 API がサードパーティアプリから行えないという制約があります。
+capsicum では v1.20 より、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)導入済みサーバー（[ダイスキー](https://misskey.delmulin.com)・[きゅあすきー](https://mk.precure.fun)等）において、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)側のプロキシエンドポイント経由でこの制約を回避し、Misskey でもプッシュ通知を受け取れるようにしました。[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)未導入の Misskey サーバーや、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)が古いバージョンのサーバーでは有効化できない場合があります。
 
-## デスクトップ版の通知（v1.34〜、Windows ネイティブは v1.40〜）
+## デスクトップ版
 
-上記のリレー方式は、iOS / Android のモバイル版で、アプリを終了していても通知を届けるための仕組みです。v1.34 では、[デスクトップ版](/desktop)（macOS / Linux / Windows）にも通知を導入しました。
+### WebSocketベース通知
 
-デスクトップ版では、アプリの起動中に各サーバーへ常時 WebSocket 接続し（Mastodon の `user` ストリーム / Misskey の `main` チャンネル）、届いた通知を OS のローカル通知（macOS の通知センター / Linux の libnotify / Windows のトースト）に表示します。タイムラインを前面に出していなくても、ウィンドウを開いてさえいれば通知が届きます。この方式はサーバー標準の streaming API の上で動作するため、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)の有無を問わず、ログイン中のすべてのアカウントで利用できます。
+[デスクトップ版](/desktop) はプッシュ通知だけでなく、WebSocketベースの通知機能に対応します。
 
-macOS ではこれに加えて、モバイルと同じリレー経由の APNs によるネイティブ push 通知に対応しています。**v1.40 では Windows のネイティブ通知（WNS）にも対応しました** — リレーサーバーから Windows 通知サービス（WNS）経由で通知を送り、アプリを完全に終了している間でも、バックグラウンドタスクが受信・復号してトースト通知を表示します。あわせて、ウィンドウを閉じてもトレイに常駐して通知を受け続ける「常駐」と、ログイン時の自動起動にも対応しました（詳しくは[デスクトップ版について](/desktop)、いずれも Windows で先行・macOS / Linux は後続）。
+### macOS版
+
+WebSocketベース通知だけでなく、リレー経由の APNs によるネイティブプッシュ通知（iOSと同じ）にも限定的に対応しています。
+
+### Windows版
+
+WebSocketベース通知だけでなく、ネイティブ通知（WNS）にも対応しました。
+リレーサーバーから Windows 通知サービス（WNS）経由で通知を送り、アプリを完全に終了している間でも、バックグラウンドタスクが受信・復号してトースト通知を表示します。
 
 ## プライバシー
 
