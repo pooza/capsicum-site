@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.shrieker.capsicum",
+      "sha256_cert_fingerprints": [
+        "22:B1:58:32:9F:03:D7:0D:42:EB:3D:91:B1:3B:DA:99:F5:5F:0D:69:7F:0B:0B:53:F4:69:65:69:4B:18:1E:F0"
+      ]
+    }
+  }
+]
