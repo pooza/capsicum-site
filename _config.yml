@@ -1,6 +1,0 @@
-# GitHub Pages (Jekyll) configuration.
-# 既定では Jekyll はドットディレクトリ（.well-known 等）を出力しないため、
-# Android App Links 用の /.well-known/assetlinks.json を明示的に公開対象へ含める。
-# テーマ・レンダリングは従来どおり（theme / remote_theme は未指定のまま）。
-include:
-  - ".well-known"
