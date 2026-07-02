@@ -30,31 +30,7 @@ macOS 11.5 以降
 
 - Windows 10 (1809 以降) / Windows 11 x64
 
-#### GitHub Releases 経由の MSIX 直配
-
-一般のユーザーには、証明書 import の不要な **Microsoft Store** からの導入を推奨します。
-
-1. Release アセットから 2 ファイルをダウンロード
-   - `capsicum.msix` — アプリ本体
-   - `capsicum-signing.cer` — 自己署名証明書
-2. **PowerShell を管理者として実行**し、ダウンロードフォルダへ `cd`
-3. 証明書を信頼ストア（Trusted People / LocalMachine）に import
-
-   ```powershell
-   Import-Certificate -FilePath .\capsicum-signing.cer -CertStoreLocation Cert:\LocalMachine\TrustedPeople
-   ```
-
-4. MSIX をインストール
-
-   ```powershell
-   Add-AppxPackage -Path .\capsicum.msix
-   ```
-
-5. スタートメニューから `capsicum` を起動
-
-アンインストールは「設定 → アプリ」から。証明書も消す場合は `Cert:\LocalMachine\TrustedPeople` から該当エントリを削除します。証明書 import は初回のみで、以降の更新では不要です（[詳細手順](https://github.com/pooza/capsicum/blob/main/packaging/windows/INSTALL.md)）。
-
-なお Store 経由の配布は Microsoft 側で再署名されるため、独自のコード署名証明書はこの直配補助ルートにしか関係しません。
+Windows の配布は **Microsoft Store 単独**です。
 
 ### Linux
 

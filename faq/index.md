@@ -16,7 +16,7 @@ title: FAQ - capsicum
 
 - **macOS**: [Mac App Store](https://apps.apple.com/jp/app/capsicum/id6760206608) から無償で配信中です。macOS 11.5 以降が必要です
 - **Linux**: ワンライナー `curl -fsSL https://capsicum.shrieker.net/install.sh | bash` で、AppImage のダウンロードからアプリメニュー登録までを一括で導入できます（手動で [GitHub Releases](https://github.com/pooza/capsicum/releases/latest) から AppImage を入手することもできます）
-- **Windows**: [Microsoft Store](https://apps.microsoft.com/detail/9np2gr7m2w6p) から無償で配信中です（v1.27 で公開）。Store 公開前の先行配布や証明書 import を厭わない上級者向けに、[GitHub Releases](https://github.com/pooza/capsicum/releases/latest) からの自己署名 MSIX 直配も継続しています
+- **Windows**: [Microsoft Store](https://apps.microsoft.com/detail/9np2gr7m2w6p) から無償で配信中です（v1.27 で公開）。Windows の公式配布は Microsoft Store 単独です
 
 各プラットフォームの導入方法・既知の制約は [デスクトップ版について](/desktop) を参照してください。
 
