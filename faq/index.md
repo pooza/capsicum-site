@@ -22,9 +22,7 @@ title: FAQ - capsicum
 
 ## Windows 版のインストールがうまくいきません
 
-通常は [Microsoft Store](https://apps.microsoft.com/detail/9np2gr7m2w6p) からインストールしてください。証明書 import の手間なく一般の Windows ユーザーがそのまま導入できます。
-
-GitHub Releases の自己署名 MSIX 直配を使う場合（Store 公開前の先行検証など）は、インストール前に自己署名証明書を信頼ストアに import する必要があります。PowerShell を管理者として実行し、`capsicum-signing.cer` を import してから `capsicum.msix` をインストールしてください。詳細な手順は [packaging/windows/INSTALL.md](https://github.com/pooza/capsicum/blob/main/packaging/windows/INSTALL.md) を参照してください。
+Windows の公式配布は [Microsoft Store](https://apps.microsoft.com/detail/9np2gr7m2w6p) 単独です。証明書 import の手間なく一般の Windows ユーザーがそのまま導入できます。うまくいかない場合は、Windows のバージョン（10 は 1809 以降 / 11）をご確認のうえ、[PieFed コミュニティ](https://pf.korako.me/c/capsicum) または GitHub Issues にご報告ください。
 
 ## Linux 版で日本語入力ができません
 
