@@ -90,13 +90,16 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 ## 最新リリース
 
-**v1.50.0**（2026-07-21） Android（Google Play）・iOS App Store・macOS Mac App Store・[Windows Microsoft Store](https://apps.microsoft.com/detail/9np2gr7m2w6p)・Linux AppImage の全プラットフォームで公開済みです。
+**v1.51.0**（2026-07-24） Android（Google Play）・iOS App Store・macOS Mac App Store・[Windows Microsoft Store](https://apps.microsoft.com/detail/9np2gr7m2w6p)・Linux AppImage の全プラットフォームで公開済みです。
 
-Misskey の「Play」をアプリ内で楽しめるようにしたリリースです。
+使い勝手の改善を中心にまとめたリリースです。
 
-- Misskey の「Play」を、一覧から選んでアプリ内のネイティブ画面で表示・実行できるようにしました。「いいね」にも対応しています。
-- 投稿本文・プロフィール・Play の説明文に貼られた（同じサーバーの）Play へのリンクも、アプリ内で開きます。
-- 作者名や説明文に含まれるカスタム絵文字・リンク・ハッシュタグも、投稿本文と同じように表示します。
+- デスクトップ版（macOS / Windows / Linux）のメニューバーを、どの画面でも常に使えるようにしました。新規投稿・更新・検索・タブ切り替え・実況表示のオン/オフを、メニューやキーボードショートカットから操作できます。
+- MFM の装飾に対応を広げました。キラキラ流れる sparkle や、無彩色の文字にも乗るようにした虹色 rainbow などに対応しています。
+- プロフィール設定に「承認制（フォローを手動で承認する）」「ディレクトリ掲載」のトグルを追加しました（Mastodon）。
+- 起動してからタイムラインが表示されるまでの体感速度を改善しました。
+- コレクションの作成時に、初期メンバーをまとめて選べるようにしました。
+- 投げ銭（サポート）の導線を、左メニューや「capsicum について」からたどりやすい位置に整えました。
 
 ### ダウンロード
 
