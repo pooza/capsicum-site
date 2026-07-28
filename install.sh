@@ -2,7 +2,7 @@
 # capsicum AppImage デスクトップ統合インストール (#640)
 #
 # このファイルは capsicum.shrieker.net で短縮 URL 配信するミラー。正本は
-# capsicum リポジトリの packaging/linux/install.sh で、リリースごとに
+# capsicum リポジトリの distribution/linux/install.sh で、リリースごとに
 # capsicum-site へ同期する。ワンライナー:
 #   curl -fsSL https://capsicum.shrieker.net/install.sh | bash
 #
