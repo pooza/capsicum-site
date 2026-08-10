@@ -95,7 +95,7 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 ## 最新リリース
 
-**v1.55.0**（2026-08-10） Android（Google Play）・iOS App Store・macOS Mac App Store・[Windows Microsoft Store](https://apps.microsoft.com/detail/9np2gr7m2w6p)・Linux AppImage の全プラットフォームで公開済みです。
+**v1.55.0**（2026-08-10） Android（Google Play）・iOS App Store・macOS Mac App Store・Windows Microsoft Store・Linux AppImage の全プラットフォームで公開済みです。
 
 設定のバックアップを目玉に、番組表や書きかけの復元、プッシュ通知まわりの不具合をまとめて直したリリースです。
 
