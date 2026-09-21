@@ -18,7 +18,7 @@ Universal Purchase により、 iOS / iPadOS と同一の App として提供し
 
 #### 動作要件
 
-macOS 11.5 以降
+macOS 12 以降
 
 ### Windows
 
