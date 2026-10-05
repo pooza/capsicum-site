@@ -18,6 +18,8 @@ capsicum v1.18 より、Mastodon / Misskey サーバーからのプッシュ通�
 
 **購入できるのは iOS / macOS / Android 版です。** Linux 版にはストアのアプリ内課金の仕組みがなく、Windows 版は当面対象外です。
 
+**Misskey をお使いの方は、ご購入の前にご確認ください。** Misskey では、[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)を導入していないサーバーのアカウントには、利用権を購入してもプッシュ通知が届きません（理由は下の「Mastodon と Misskey の違い」をご覧ください）。該当するアカウントをお持ちの場合は、アプリの購入の画面にもその旨を表示します。
+
 価格・自動更新の停止方法は[特定商取引法に基づく表記](/tokushoho)をご覧ください。お支払いが確認できなくなった場合の動作は [FAQ](/faq) にあります。
 
 ## Mastodon と Misskey の違い
