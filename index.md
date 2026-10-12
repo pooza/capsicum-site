@@ -119,7 +119,7 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 ## 最新リリース
 
-**v2.2.0**（2026-10-12） Android・Linux で公開済みです。iOS・macOS・Windows は各ストアの審査に提出済みで、公開を待っています。
+**v2.2.0**（2026-10-12） iOS・Android・Windows・Linux で公開済みです。macOS は App Store の審査中で、公開を待っています。
 
 タイムラインを静かに保つための道具と、デッキ表示の使い勝手の改善が中心です。
 
