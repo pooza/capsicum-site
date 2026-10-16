@@ -27,10 +27,11 @@ OS ごとに標準のメディア情報の仕組みを使って取得します�
 | Linux | MPRIS（D-Bus。Spotify / VLC / Rhythmbox / Elisa など対応プレイヤーを横断） | v1.33 で対応 |
 | Windows | SMTC（System Media Transport Controls） | v1.33 で対応 |
 | iOS / macOS | Apple Music（再生中の曲を直接取得） | v1.37 で対応 |
+| macOS | Spotify のデスクトップアプリ（再生中の曲を直接取得） | v2.3 で対応 |
 
 再生中の曲が無いときは「現在再生中の曲がありません」と表示され、投稿は作られません。
 
-> **Spotify について**: Linux / Windows では、上記の OS メディア連携（MPRIS / SMTC）が Spotify アプリの再生中の曲も拾えます。一方、全プラットフォーム横断の Spotify 専用連携（OAuth）は、Spotify の API 提供条件の都合により見送っています。
+> **Spotify について**: Linux / Windows では、上記の OS メディア連携（MPRIS / SMTC）が Spotify アプリの再生中の曲も拾えます。macOS では v2.3 から Spotify のデスクトップアプリに直接問い合わせます（ミュージックと両方で再生しているときは、設定の「ナウプレの優先サービス」で選んだほうを使います）。一方、全プラットフォーム横断の Spotify 専用連携（OAuth）は、Spotify の API 提供条件の都合により見送っています。
 
 ## 投稿の体裁
 
@@ -54,9 +55,9 @@ v2.1 から、再生中の曲のアートワーク（ジャケット）が取れ
 - 添付は自動です。代替テキストも自動で入ります。不要なら、投稿前に添付を外せます。
 - アートワークが取れなかったときは、本文だけのナウプレになります。投稿は止まりません。
 - アートワークの出どころは 2 つあります。
-  - 再生アプリが持っているもの（Linux の MPRIS・macOS のミュージックアプリ）。macOS は v2.2 から対応しました（[#1273](https://github.com/pooza/capsicum/issues/1273)）。両方から取れたときは、こちらを使います。
+  - 再生アプリが持っているもの（Linux の MPRIS・macOS / iOS のミュージックアプリ・macOS の Spotify）。macOS は v2.2、iOS と macOS の Spotify は v2.3 から対応しました（[#1273](https://github.com/pooza/capsicum/issues/1273) / [#1275](https://github.com/pooza/capsicum/issues/1275) / [#1276](https://github.com/pooza/capsicum/issues/1276)）。両方から取れたときは、こちらを使います。
   - [プリセットサーバー](/preset-servers)（[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)導入済み）がサーバー側で探したもの。こちらはすべてのプラットフォームで使えます。
-- モロヘイヤの無いサーバーでは、いまのところ Linux と macOS がアートワークを添付できます。
+- モロヘイヤの無いサーバーでは、いまのところ Linux・macOS・iOS がアートワークを添付できます。
 
 ## プリセットサーバーでの強化
 
