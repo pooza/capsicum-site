@@ -55,9 +55,9 @@ v2.1 から、再生中の曲のアートワーク（ジャケット）が取れ
 - 添付は自動です。代替テキストも自動で入ります。不要なら、投稿前に添付を外せます。
 - アートワークが取れなかったときは、本文だけのナウプレになります。投稿は止まりません。
 - アートワークの出どころは 2 つあります。
-  - 再生アプリが持っているもの（Linux の MPRIS・macOS / iOS のミュージックアプリ・macOS の Spotify）。macOS は v2.2、iOS と macOS の Spotify は v2.3 から対応しました（[#1273](https://github.com/pooza/capsicum/issues/1273) / [#1275](https://github.com/pooza/capsicum/issues/1275) / [#1276](https://github.com/pooza/capsicum/issues/1276)）。両方から取れたときは、こちらを使います。
+  - 再生アプリが持っているもの（Linux の MPRIS・Windows の SMTC・macOS / iOS のミュージックアプリ・macOS の Spotify）。macOS は v2.2、iOS と macOS の Spotify は v2.3、Windows は v2.4 から対応しました（[#1273](https://github.com/pooza/capsicum/issues/1273) / [#1275](https://github.com/pooza/capsicum/issues/1275) / [#1276](https://github.com/pooza/capsicum/issues/1276) / [#1274](https://github.com/pooza/capsicum/issues/1274)）。両方から取れたときは、こちらを使います。
   - [プリセットサーバー](/preset-servers)（[モロヘイヤ](https://github.com/pooza/mulukhiya-toot-proxy)導入済み）がサーバー側で探したもの。こちらはすべてのプラットフォームで使えます。
-- モロヘイヤの無いサーバーでは、いまのところ Linux・macOS・iOS がアートワークを添付できます。
+- モロヘイヤの無いサーバーでは、いまのところ Linux・Windows・macOS・iOS がアートワークを添付できます。
 
 ## プリセットサーバーでの強化
 
