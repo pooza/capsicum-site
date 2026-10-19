@@ -125,7 +125,9 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 ## 最新リリース
 
-**v2.4.0**（2026-10-18） Linux 版は公開済みです。iOS・macOS・Android・Windows は、各ストアの審査が済みしだい順次公開されます。
+**v2.4.1**（2026-10-18） iOS・Linux で公開済みです。macOS・Android・Windows は、各ストアの審査が済みしだい順次公開されます。
+
+v2.4.1 は、v2.4.0 の公開直後に見つかった不具合（デッキのカラムから開くエピソードブラウザ・Annict・テンプレート管理が、そのカラムのアカウントで動かなかった問題）を直した版です。v2.4 の変更は次のとおりです。
 
 Mastodon の投稿の既定（公開範囲など）と、アイコン・ヘッダーの説明（ALT）を、capsicum から変えられるようになりました。
 
@@ -137,7 +139,7 @@ Mastodon の投稿の既定（公開範囲など）と、アイコン・ヘッ�
 
 2.0 はメジャーアップデートで、デッキ表示（マルチカラム）・[プリセットサーバー](/preset-servers)以外への[プッシュ通知](/push-notification)・添付画像のレイヤー編集の 3 つを加えています。
 
-すべての変更は GitHub のリリースページ（[v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
+すべての変更は GitHub のリリースページ（[v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
 
 ### ダウンロード
 
