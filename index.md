@@ -46,7 +46,7 @@ v2.0 より、タイムラインを列として横に並べて表示できます
 - 最後に見ていた列と、デッキ表示 / タブ表示のどちらを開いていたかを覚えています（v2.1〜）。
 - タブ表示と同じドロワー（メニュー）から、ブックマーク・リスト・予約投稿などへ届きます。列をロックして、うっかり閉じないようにもできます（v2.2〜）。
 - 列の中を縦にスクロールすると、その列にフォーカスが移ります。読んでいた列のアカウントで、そのまま簡易投稿バーから書けます（v2.5〜）。
-- 投稿画面と簡易投稿バーの入力欄に、投稿先のサーバー名が出ます。複数のアカウントを使っていても、送る前に投稿先を確かめられます（v2.5〜）。
+- 投稿画面と簡易投稿バーの入力欄に、投稿先のサーバー名が出ます。複数のアカウントを使っていても、送る前に投稿先を確かめられます（v2.5〜）。サーバーのアイコン（favicon）でも見分けられます（v2.6〜）。
 
 ### Mastodon/Misskeyの本来機能
 
@@ -127,18 +127,19 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 ## 最新リリース
 
-**v2.5.0**（2026-10-22） iOS・macOS・Android・Windows・Linux のすべてで公開済みです。
+**v2.6.0**（2026-10-25） iOS・macOS・Android・Windows・Linux のすべてで公開済みです。
 
-どのアカウント（サーバー）で投稿・連携するのかが、投稿画面・簡易投稿バー・連携のダイアログで分かるようになりました。
+投稿に使うアカウントのサーバーを、favicon でも見分けられるようになりました。ナウプレは投稿フォームを開かずに始められるようになり、iPad ではメニューバーに capsicum のメニューが並びます。
 
-- **投稿先の表示**: 投稿画面と簡易投稿バーの入力欄に、投稿先のサーバー名が出ます。Annict・Spotify の連携と解除のダイアログにも、対象のアカウントが出ます。
-- **デッキ表示**: 列の中を縦にスクロールすると、その列にフォーカスが移ります。書きかけの文章は、移った先の列の簡易投稿バーへ引き継ぎます。
-- **アカウント**: 接続済みのアカウントを、切り替えずにドロワーから端末から削除できます（呼び名を「ログアウト」から「削除」に改めました。サーバー上のアカウントは消えません）。
-- **不具合修正**: Windows でルート証明書が足りない端末からプリセットサーバーにつながらなかった問題や、デッキ表示が遷移の後でタブ表示に戻ってしまう問題、設定のバックアップを読み込んでもデッキの列が出なかった問題などを直しました。
+- **投稿先の表示**: 投稿画面のタイトル、上のバー、ドロワーのアカウント切り替え、デッキの簡易投稿バーに、サーバーのアイコン（favicon）が出ます。v2.5 で入れた入力欄のサーバー名と合わせて、投稿先の取り違えを防ぎます。
+- **ナウプレ**: デスクトップはメニューの「移動 > ナウプレで新規投稿」（⇧⌘N / Ctrl+Shift+N）、スマートフォンは簡易投稿バーの「詳細な投稿画面」ボタンの長押しで、再生中の曲を入れた投稿フォームが開きます。
+- **iPad**: メニューバー（iPadOS 26〜）に、デスクトップと同じ「移動」「アカウント」「表示」などのメニューが並びます。外付けキーボードで ⌘N などのショートカットも使えます。
+- **Mastodon / Misskey**: Misskey 2026.10.1 に対応しました。Mastodon のお知らせのリアクションは、サーバーが許しているときだけ出します。
+- **不具合修正**: タイムラインのライブ更新が接続の途中で止まったまま戻らないことがあった問題や、Windows のナウプレで 2 回目からジャケット画像が付かないことがあった問題、通知のタップで開いていた画面が置き換わってしまうことがあった問題などを直しました。
 
 2.0 はメジャーアップデートで、デッキ表示（マルチカラム）・[プリセットサーバー](/preset-servers)以外への[プッシュ通知](/push-notification)・添付画像のレイヤー編集の 3 つを加えています。
 
-すべての変更は GitHub のリリースページ（[v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
+すべての変更は GitHub のリリースページ（[v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
 
 ### ダウンロード
 

@@ -16,6 +16,8 @@ capsicum は iOS / Android のモバイル版に加え、macOS / Linux / Windows
 Mac App Store から無償で配信中（v1.24 で初公開）。
 Universal Purchase により、 iOS / iPadOS と同一の App として提供しています。
 
+iPad でも、メニューバー（iPadOS 26〜）にデスクトップと同じメニューが並び、外付けキーボードからショートカットを使えます（v2.6〜）。
+
 #### 動作要件
 
 macOS 12 以降。Apple シリコン搭載の Mac を推奨します。
