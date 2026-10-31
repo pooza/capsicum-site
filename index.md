@@ -134,9 +134,9 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 ## 最新リリース
 
-**v2.8.0**（2026-10-31） iOS・macOS・Android・Windows・Linux のすべてで公開済みです。
+**v2.8.1**（2026-11-01） Flutter のセキュリティ勧告に対応する修正版で、Android・Windows・Linux で公開済みです。機能の変更はありません。iOS・macOS は勧告の影響を受けないので、v2.8.0 のままです。
 
-Misskey のチャンネルを、見るだけでなく探す・フォローする・作ることができるようになりました。デッキには画面全体に 1 枚の背景画像を敷けるようになり、本文のリンクを専用アプリで開くサービスも増えています。
+**v2.8.0**（2026-10-31）では、Misskey のチャンネルを、見るだけでなく探す・フォローする・作ることができるようになりました。デッキには画面全体に 1 枚の背景画像を敷けるようになり、本文のリンクを専用アプリで開くサービスも増えています。
 
 - **Misskey のチャンネル**: ドロワーの「チャンネル」にある「チャンネルを探す・管理する」から開きます。人気・フォロー中・お気に入り・自分のチャンネルを切り替えられ、検索もできます。
 - **デッキ表示**: 設定の「表示」にある「デッキの背景画像」で、画面全体に敷く画像を選べます。カラムごとではなく、デッキ専用の 1 枚です。
@@ -146,7 +146,7 @@ Misskey のチャンネルを、見るだけでなく探す・フォローする
 
 2.0 はメジャーアップデートで、デッキ表示（マルチカラム）・[プリセットサーバー](/preset-servers)以外への[プッシュ通知](/push-notification)・添付画像のレイヤー編集の 3 つを加えています。
 
-すべての変更は GitHub のリリースページ（[v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
+すべての変更は GitHub のリリースページ（[v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
 
 ### ダウンロード
 
