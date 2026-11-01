@@ -20,12 +20,12 @@ capsicum はサードパーティの Mastodon / Misskey サーバーがホスト
 
 ## Safety Measures / 安全対策
 
-- The app does not collect personal information from any users, including children
+- The app does not intentionally collect personal information from any users, including children
 - The app respects server-side content warnings (CW) and sensitive media flags
 - The app applies server-side word filters to hide or warn about filtered content
 - The app does not provide features for discovering or contacting other users beyond the features provided by the connected server
 
-- 本アプリは子どもを含むすべてのユーザーから個人情報を収集しません
+- 本アプリは子どもを含むすべてのユーザーから、個人情報を意図的に収集することはありません
 - サーバー側のコンテンツ警告（CW）およびセンシティブメディアフラグを尊重します
 - サーバー側のワードフィルタを適用し、フィルタ対象のコンテンツを非表示または警告表示します
 - 接続先サーバーが提供する機能を超えて、他のユーザーを発見・連絡する機能は提供しません
