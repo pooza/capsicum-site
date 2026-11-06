@@ -52,6 +52,7 @@ v2.0 より、タイムラインを列として横に並べて表示できます
 - デッキの画面全体に、背景画像を 1 枚敷けます（v2.8〜）。
 - すべてのアカウントのお知らせを、1 つの列でまとめて見られます（v2.9〜）。
 - 間が空いてから投稿するとき、投稿先のアカウントを確かめられます。設定でオンにした人だけに出ます（v2.9〜）。
+- メニューバーの「アカウント」と「移動」は、フォーカス中の列のアカウントで動きます（v2.10〜）。
 
 ### Mastodon/Misskeyの本来機能
 
@@ -83,6 +84,8 @@ v2.0 より、タイムラインを列として横に並べて表示できます
 - 本文のリンクを、専用アプリで開けます。サービスごとに、ブラウザで開くように変えられます（iOS・Android・v2.8〜）。
 - Play を「いつもの」（自分の Play といいねした Play）から開けます。検索と、自分の Play の削除もできます（Misskey・v2.9〜）。
 - アイコンデコレーションを選んで付け外しできます（Misskey・v2.9〜）。
+- アンテナを作る・編集する・削除することができます（Misskey・v2.10〜）。
+- 引用の中のリンクとプレビューカードを、そのまま押して開けます（v2.10〜）。
 - [プッシュ通知](/push-notification)
 
 ### 独自機能
@@ -138,17 +141,16 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 ## 最新リリース
 
-**v2.9.0**（2026-11-03）では、Misskey の Play を、いつも遊ぶものから開けるようになり、検索もできるようになりました。アイコンデコレーションをアプリから付け外しできるようになり、デッキにはすべてのアカウントのお知らせをまとめて見る列が加わっています。全 5 プラットフォーム（iOS・Android・macOS・Windows・Linux）で公開済みです。
+**v2.10.0**（2026-11-05）では、Misskey のアンテナをアプリから作成・編集・削除できるようになりました。引用の中のリンクとプレビューカードが押せるようになり、Mastodon 5.0 に向けた対応も入っています。全 5 プラットフォーム（iOS・Android・macOS・Windows・Linux）で公開済みです。
 
-- **Misskey の Play**: Play の画面は「いつもの」から開きます。自分の Play と、いいねした Play を合わせて並べます。日課で遊ぶ Play にいいねしておくと、ここからすぐに開けます。「自分の」「人気」にも切り替えられ、検索もできます。
-- **Misskey のアイコンデコレーション**: プロフィールの編集にある「アイコンデコレーション」で、選んで付け外しできます。位置の調整が Web 版と同じように反映されるようにもなりました。
-- **デッキ表示**: 列の追加から「すべてのお知らせ」を選ぶと、すべてのアカウントのお知らせをまとめて見られます。設定の「表示」にある「デッキで間が空いたら投稿先を確認する」をオンにすると、間が空いてから投稿するときに投稿先を尋ねます。
-- **ナウプレ**: アカウントが 2 つ以上あるとき、音楽アプリから共有すると、どのアカウントで投稿するかを選べます。
-- **お知らせ**: iOS・Android で、アプリを前面に出したまま使っている間も、お知らせを 15 分ごとに取り直します。
+- **Misskey のアンテナ**: ドロワーの「アンテナ」の一覧の末尾にある「アンテナを管理する」から開きます（アンテナが 1 つも無くても開けます）。アンテナの画面の右上の「…」からも、編集と削除ができます。条件の項目は Web 版の編集画面と同じです。
+- **引用**: 引用の中のリンクとプレビューカードを押せるようになりました。リンクやカードの外を押したときは、これまでどおり引用元が開きます。
+- **デッキ表示**: メニューバーの「アカウント」と「移動」が、フォーカス中の列のアカウントで動くようになりました。本文のリンクやメンションを押したのにスレッドの列が開くことがあった問題も直しています。
+- **Mastodon**: ログインできない理由（承認待ち・メールアドレスの確認待ち）を出し分けます。Mastodon 5.0 では、投稿画面の CW 欄を最初から開く設定にも従います。
 
 2.0 はメジャーアップデートで、デッキ表示（マルチカラム）・[プリセットサーバー](/preset-servers)以外への[プッシュ通知](/push-notification)・添付画像のレイヤー編集の 3 つを加えています。
 
-すべての変更は GitHub のリリースページ（[v2.9.0](https://github.com/pooza/capsicum/releases/tag/v2.9.0) / [v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
+すべての変更は GitHub のリリースページ（[v2.10.0](https://github.com/pooza/capsicum/releases/tag/v2.10.0) / [v2.9.0](https://github.com/pooza/capsicum/releases/tag/v2.9.0) / [v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
 
 ### ダウンロード
 
