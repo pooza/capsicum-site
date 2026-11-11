@@ -83,9 +83,10 @@ v2.0 より、タイムラインを列として横に並べて表示できます
 - チャンネルを探す・フォローする・作る・編集することができます（Misskey・v2.8〜）。
 - 本文のリンクを、専用アプリで開けます。サービスごとに、ブラウザで開くように変えられます（iOS・Android・v2.8〜）。
 - Play を「いつもの」（自分の Play といいねした Play）から開けます。検索と、自分の Play の削除もできます（Misskey・v2.9〜）。
-- アイコンデコレーションを選んで付け外しできます（Misskey・v2.9〜）。
+- アイコンデコレーションを選んで付け外しできます（Misskey・v2.9〜）。位置・角度・左右反転も調整できます（v2.11〜）。
 - アンテナを作る・編集する・削除することができます（Misskey・v2.10〜）。
 - 引用の中のリンクとプレビューカードを、そのまま押して開けます（v2.10〜）。
+- クリップを作る・編集する・削除することができます。投稿のメニューから、クリップに入れたり外したりもできます（Misskey・v2.11〜）。
 - [プッシュ通知](/push-notification)
 
 ### 独自機能
@@ -141,16 +142,17 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 ## 最新リリース
 
-**v2.10.0**（2026-11-05）では、Misskey のアンテナをアプリから作成・編集・削除できるようになりました。引用の中のリンクとプレビューカードが押せるようになり、Mastodon 5.0 に向けた対応も入っています。全 5 プラットフォーム（iOS・Android・macOS・Windows・Linux）で公開済みです。
+**v2.11.0**（2026-11-11）では、Misskey のクリップをアプリから作成・編集・削除し、投稿を入れたり外したりできるようになりました。アイコンデコレーションの位置や角度の調整、投稿フォームの「入力を空にする」なども入っています。全 5 プラットフォーム（iOS・Android・macOS・Windows・Linux）で公開済みです。
 
-- **Misskey のアンテナ**: ドロワーの「アンテナ」の一覧の末尾にある「アンテナを管理する」から開きます（アンテナが 1 つも無くても開けます）。アンテナの画面の右上の「…」からも、編集と削除ができます。条件の項目は Web 版の編集画面と同じです。
-- **引用**: 引用の中のリンクとプレビューカードを押せるようになりました。リンクやカードの外を押したときは、これまでどおり引用元が開きます。
-- **デッキ表示**: メニューバーの「アカウント」と「移動」が、フォーカス中の列のアカウントで動くようになりました。本文のリンクやメンションを押したのにスレッドの列が開くことがあった問題も直しています。
-- **Mastodon**: ログインできない理由（承認待ち・メールアドレスの確認待ち）を出し分けます。Mastodon 5.0 では、投稿画面の CW 欄を最初から開く設定にも従います。
+- **Misskey のクリップ**: ドロワーの「クリップ」の一覧の末尾にある「クリップを管理する」から開きます（クリップが 1 つも無くても開けます）。投稿のメニューの「クリップに追加」から、投稿を入れたり外したりできます。末尾の「新しいクリップ」で、その場で作って入れられます。
+- **Misskey のアイコンデコレーション**: 付けているデコレーションの「調整」から、位置・角度・左右反転を変えられます。
+- **投稿フォーム**: 右上の「…」メニューに「入力を空にする…」を足しました。返信先・引用先・チャンネルは残したまま、本文や添付などを消します。デスクトップでは ⇧⌘K（Windows / Linux は Ctrl+Shift+K）でも呼び出せます。
+- **デスクトップ**: ほかのアプリを使っていて capsicum のウィンドウを押したとき、その 1 回はウィンドウを前面に出すだけになり、投稿や列を開かなくなりました。
+- **少年ジャンプ＋**: 「勇者アバンと獄炎の魔王」の話のリンクを、スマートフォンではジャンプ＋のアプリの作品ページで開きます。
 
 2.0 はメジャーアップデートで、デッキ表示（マルチカラム）・[プリセットサーバー](/preset-servers)以外への[プッシュ通知](/push-notification)・添付画像のレイヤー編集の 3 つを加えています。
 
-すべての変更は GitHub のリリースページ（[v2.10.0](https://github.com/pooza/capsicum/releases/tag/v2.10.0) / [v2.9.0](https://github.com/pooza/capsicum/releases/tag/v2.9.0) / [v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
+すべての変更は GitHub のリリースページ（[v2.11.0](https://github.com/pooza/capsicum/releases/tag/v2.11.0) / [v2.10.0](https://github.com/pooza/capsicum/releases/tag/v2.10.0) / [v2.9.0](https://github.com/pooza/capsicum/releases/tag/v2.9.0) / [v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
 
 ### ダウンロード
 
