@@ -32,9 +32,9 @@ Windows の公式配布は [Microsoft Store](https://apps.microsoft.com/detail/9
 
 ## Linux 版で日本語入力ができません
 
-`ibus-mozc` 等の ibus 経路は動作確認済みです。`fcitx5` 経路も外部ユーザーから動作報告をいただいています。`uim` 用の immodule も AppImage に同梱していますが、開発環境外のため **best-effort** とさせてください。動作しない場合は ibus か fcitx5 経由でご利用ください。
+ibus・fcitx5・uim 用の immodule を AppImage に同梱しており、3 つの経路とも動作確認済みです（Ubuntu 26.04 で `ibus-mozc` / `fcitx5-mozc` / `uim-mozc`。ibus は Debian 13 でも確認、fcitx5 は外部ユーザーからも動作報告をいただいています）。
 
-ibus 経路で動作しない場合は、`~/.local/share/capsicum/logs/` のログとあわせて [PieFed コミュニティ](https://pf.korako.me/c/capsicum) または GitHub Issues にご報告ください。
+動作しない場合は、`~/.local/share/capsicum/logs/` のログとあわせて [PieFed コミュニティ](https://pf.korako.me/c/capsicum) または GitHub Issues にご報告ください。
 
 ## Linux 版で絵文字が白黒（モノクロ）で表示されます
 

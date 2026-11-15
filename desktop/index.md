@@ -50,7 +50,23 @@ AppImage を [GitHub Releases](https://github.com/pooza/capsicum/releases/latest
 curl -fsSL https://capsicum.shrieker.net/install.sh | bash
 ```
 
-実行後、アプリメニューに「capsicum」が表示されます（出ない場合はログアウト → 再ログインでランチャーが更新されます）。AppImageLauncher を導入していない環境でも、これだけで GUI ランチャーから起動できます（v1.30 で追加、[#640](https://github.com/pooza/capsicum/issues/640)）。
+実行後、アプリメニューに「capsicum」が表示されます（出ない場合はログアウト → 再ログインでランチャーが更新されます）。AppImageLauncher を導入していない環境でも、これだけで GUI ランチャーから起動できます（v1.30 で追加、[#640](https://github.com/pooza/capsicum/issues/640)）。ダウンロードした AppImage は、GitHub Releases に載っている SHA-256 と照合してからインストールします（v2.12 で追加、[#1384](https://github.com/pooza/capsicum/issues/1384)）。
+
+**AppImageLauncher とは併用しないでください。**AppImageLauncher は `~/Applications/` にある AppImage を見つけるたびにアプリメニューへ登録するため、ワンライナーが置くファイルもそれぞれ登録され、アプリメニューに「capsicum」がいくつも並びます。ワンライナーで導入した場合は、アプリメニューへの登録は済んでいるので AppImageLauncher は不要です。
+
+#### うまくいかないとき
+
+ワンライナーは、ダウンロードした AppImage が SHA-256 と合わなければ、何もインストールせずに止まります。止まったときは、原因の候補が表示されます。
+
+- **curl / wget の設定ファイル**（`~/.curlrc`・`~/.wgetrc` など）。ここに書いたオプションは毎回のダウンロードに加わります。たとえば curl の `-i`（応答のヘッダーを中身に混ぜる）が入っていると、ダウンロードしたファイルが壊れます
+- **プロキシ・証明書の環境変数**（`https_proxy` / `ALL_PROXY` / `CURL_CA_BUNDLE` など）。表示されるのは変数の名前だけで、値は表示しません
+- どちらも見つからなければ、ネットワークか配布側の一時的な問題の可能性があります。時間をおいて試してください
+
+設定を見直すか、下の「手動インストール」に切り替えてください。それでも進めたいときは `--force` を付けると、照合が合わなくても警告を出したうえでインストールします（AppImage として読めないほど壊れたファイルはインストールしません）。
+
+```bash
+curl -fsSL https://capsicum.shrieker.net/install.sh | bash -s -- --force
+```
 
 #### 手動インストール
 
@@ -78,7 +94,7 @@ curl -fsSL https://capsicum.shrieker.net/uninstall.sh | bash
 
 新しいバージョンが出ると capsicum 内で更新を検知してお知らせします（直配チャネル向けの新版通知、v1.30 で追加、[#641](https://github.com/pooza/capsicum/issues/641)）。
 
-**日本語入力について**: `ibus-mozc` 等の ibus 経路は動作確認済みです。`fcitx5` 経路も外部ユーザーから動作報告をいただいています。`uim` 用の immodule も同梱していますが、開発環境外のため **best-effort** とさせてください。動作しない場合は ibus か fcitx5 経由でご利用ください。
+**日本語入力について**: ibus・fcitx5・uim の 3 つの経路とも動作確認済みです（Ubuntu 26.04 で `ibus-mozc` / `fcitx5-mozc` / `uim-mozc`。ibus は Debian 13 でも確認、fcitx5 は外部ユーザーからも動作報告をいただいています）。上記以外の組み合わせで動作しない場合は、ご報告ください。
 
 ## プラットフォーム別の現状
 
