@@ -133,6 +133,8 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 フォーク（Mastodon / Misskey の派生ソフトウェア）についても、本家 API との互換性を維持するのはフォーク側の責任です。capsicum 側でフォーク固有の対応は行いません。
 
+Pleroma 系（Akkoma）のサーバーは、Mastodon と共通の API の範囲で使えるようにしています（v2.12〜・プッシュ通知は対応予定）。Akkoma 独自の機能（絵文字リアクションなど）には対応しません。
+
 ## 開発について
 
 - capsicum のコードの大半は [Claude Code](https://claude.ai/claude-code)によって書かれています。
@@ -142,17 +144,17 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 ## 最新リリース
 
-**v2.11.0**（2026-11-11）では、Misskey のクリップをアプリから作成・編集・削除し、投稿を入れたり外したりできるようになりました。アイコンデコレーションの位置や角度の調整、投稿フォームの「入力を空にする」なども入っています。全 5 プラットフォーム（iOS・Android・macOS・Windows・Linux）で公開済みです。
+**v2.12.0**（2026-11-15）では、Akkoma（Pleroma 系）のサーバーで基本の操作が使えるようになり、Annict の感想・記録の本文を自動で保存するようにしました。Linux 版は専用の検証機で一通り確かめ、見つかった不具合を直しています。全 5 プラットフォーム（iOS・Android・macOS・Windows・Linux）で公開済みです。
 
-- **Misskey のクリップ**: ドロワーの「クリップ」の一覧の末尾にある「クリップを管理する」から開きます（クリップが 1 つも無くても開けます）。投稿のメニューの「クリップに追加」から、投稿を入れたり外したりできます。末尾の「新しいクリップ」で、その場で作って入れられます。
-- **Misskey のアイコンデコレーション**: 付けているデコレーションの「調整」から、位置・角度・左右反転を変えられます。
-- **投稿フォーム**: 右上の「…」メニューに「入力を空にする…」を足しました。返信先・引用先・チャンネルは残したまま、本文や添付などを消します。デスクトップでは ⇧⌘K（Windows / Linux は Ctrl+Shift+K）でも呼び出せます。
-- **デスクトップ**: ほかのアプリを使っていて capsicum のウィンドウを押したとき、その 1 回はウィンドウを前面に出すだけになり、投稿や列を開かなくなりました。
-- **少年ジャンプ＋**: 「勇者アバンと獄炎の魔王」の話のリンクを、スマートフォンではジャンプ＋のアプリの作品ページで開きます。
+- **Akkoma（Pleroma 系）**: ログイン・タイムライン・投稿・通知の一覧などが使えます。プッシュ通知にはまだ対応していません（次の版で対応予定）。
+- **Annict の感想・記録**: 書いている本文と評価を自動で保存します。画面を閉じても、同じ作品・話数を開き直すと続きから書けます。
+- **デッキ表示**: デッキ表示の間は、ウィンドウの帯やボタンの色を固定の緑にしました。タブ表示ではこれまでどおりサーバーの色です。
+- **Misskey のチャンネル**: チャンネルの中のリノートから返信するとき、返信がそのチャンネルに入らないことを投稿画面で示します。
+- **Linux**: ログインし直すたびにほかのアカウントのログイン情報が消えることがあった問題と、キーリングのロック解除の画面が出続けていた問題を直しました。インストーラー（install.sh）は、ダウンロードした AppImage を照合してからインストールします。
 
 2.0 はメジャーアップデートで、デッキ表示（マルチカラム）・[プリセットサーバー](/preset-servers)以外への[プッシュ通知](/push-notification)・添付画像のレイヤー編集の 3 つを加えています。
 
-すべての変更は GitHub のリリースページ（[v2.11.0](https://github.com/pooza/capsicum/releases/tag/v2.11.0) / [v2.10.0](https://github.com/pooza/capsicum/releases/tag/v2.10.0) / [v2.9.0](https://github.com/pooza/capsicum/releases/tag/v2.9.0) / [v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
+すべての変更は GitHub のリリースページ（[v2.12.0](https://github.com/pooza/capsicum/releases/tag/v2.12.0) / [v2.11.0](https://github.com/pooza/capsicum/releases/tag/v2.11.0) / [v2.10.0](https://github.com/pooza/capsicum/releases/tag/v2.10.0) / [v2.9.0](https://github.com/pooza/capsicum/releases/tag/v2.9.0) / [v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
 
 ### ダウンロード
 
