@@ -14,9 +14,9 @@ capsicum は Mastodon および Misskey に対応する Fediverse クライア�
 
 ## Content Responsibility / コンテンツの責任
 
-capsicum is a client application that displays content hosted on third-party Mastodon and Misskey servers. The app does not host, moderate, or control any user-generated content. Content moderation, community guidelines, and safety measures are the responsibility of each server's operator.
+capsicum is a client application that displays content hosted on third-party Mastodon, Misskey, and Akkoma servers. The app does not host, moderate, or control any user-generated content. Content moderation, community guidelines, and safety measures are the responsibility of each server's operator.
 
-capsicum はサードパーティの Mastodon / Misskey サーバーがホストするコンテンツを表示するクライアントアプリです。本アプリはユーザー生成コンテンツのホスティング・モデレーション・管理を行いません。コンテンツの管理・コミュニティガイドライン・安全対策は各サーバーの運営者の責任です。
+capsicum はサードパーティの Mastodon / Misskey / Akkoma サーバーがホストするコンテンツを表示するクライアントアプリです。本アプリはユーザー生成コンテンツのホスティング・モデレーション・管理を行いません。コンテンツの管理・コミュニティガイドライン・安全対策は各サーバーの運営者の責任です。
 
 ## Safety Measures / 安全対策
 

@@ -8,7 +8,7 @@ title: capsicum
 
 ## capsicumとは？
 
-Mastodon / Misskey 対応の Fediverse クライアントアプリです。
+Mastodon / Misskey / Akkoma（Pleroma 系）対応の Fediverse クライアントアプリです。
 
 capsicum が提案するのは、アプリ単体の体験ではなく、サーバーとの一体感です。[プリセットサーバー](/preset-servers)では、サーバーサイド拡張との連携により、アニメ実況支援をはじめとした独自機能が利用できます。この一体感こそが capsicum の存在意義です。
 
@@ -64,6 +64,7 @@ v2.0 より、タイムラインを列として横に並べて表示できます
   - Mastodon ・ Misskey 両対応
   - Mastodon で、Misskey からの引用も引用として表示します（v2.4〜）。
 - 投稿の既定（公開範囲・閲覧注意・言語・引用の許可）と、アイコン・ヘッダーの説明（ALT）の設定（Mastodon・v2.4〜）
+- プライバシーとつながりやすさの設定（フォローの承認制・おすすめや検索への掲載・フォロー / フォロワーの一覧の公開範囲など。項目はサーバーによって違います・v2.13〜）
 - 絵文字ピッカー
   - カスタム絵文字・Unicode絵文字共に、キーワード検索に対応
 - 複数ハッシュタグの条件つきタイムライン（Mastodon「上級者」WebUIの機能）
@@ -133,7 +134,7 @@ capsicum は最新の Mastodon / Misskey の API に対して実装していま�
 
 フォーク（Mastodon / Misskey の派生ソフトウェア）についても、本家 API との互換性を維持するのはフォーク側の責任です。capsicum 側でフォーク固有の対応は行いません。
 
-Pleroma 系（Akkoma）のサーバーは、Mastodon と共通の API の範囲で使えるようにしています（v2.12〜・プッシュ通知は対応予定）。Akkoma 独自の機能（絵文字リアクションなど）は、今後段階的に対応していく予定です。
+Pleroma 系（Akkoma）のサーバーは、Mastodon と共通の API の範囲で使えるようにしています（v2.12〜・プッシュ通知は v2.13〜）。Akkoma 独自の機能（絵文字リアクションなど）は、今後段階的に対応していく予定です。
 
 ## 開発について
 
@@ -144,17 +145,16 @@ Pleroma 系（Akkoma）のサーバーは、Mastodon と共通の API の範囲�
 
 ## 最新リリース
 
-**v2.12.0**（2026-11-15）では、Akkoma（Pleroma 系）のサーバーで基本の操作が使えるようになり、Annict の感想・記録の本文を自動で保存するようにしました。Linux 版は専用の検証機で一通り確かめ、見つかった不具合を直しています。全 5 プラットフォーム（iOS・Android・macOS・Windows・Linux）で公開済みです。
+**v2.13.0**（2026-11-19）では、Akkoma（Pleroma 系）のサーバーでプッシュ通知が届くようになりました。この版から capsicum を「Mastodon / Misskey / Akkoma クライアント」としてご案内します。あわせて、プライバシーとつながりやすさの設定をアプリから変えられる画面を加えました。全 5 プラットフォーム（iOS・Android・macOS・Windows・Linux）で公開済みです。
 
-- **Akkoma（Pleroma 系）**: ログイン・タイムライン・投稿・通知の一覧などが使えます。プッシュ通知にはまだ対応していません（次の版で対応予定）。
-- **Annict の感想・記録**: 書いている本文と評価を自動で保存します。画面を閉じても、同じ作品・話数を開き直すと続きから書けます。
-- **デッキ表示**: デッキ表示の間は、ウィンドウの帯やボタンの色を固定の緑にしました。タブ表示ではこれまでどおりサーバーの色です。
-- **Misskey のチャンネル**: チャンネルの中のリノートから返信するとき、返信がそのチャンネルに入らないことを投稿画面で示します。
-- **Linux**: ログインし直すたびにほかのアカウントのログイン情報が消えることがあった問題と、キーリングのロック解除の画面が出続けていた問題を直しました。インストーラー（install.sh）は、ダウンロードした AppImage を照合してからインストールします。
+- **Akkoma のプッシュ通知**: Akkoma のサーバーからもプッシュ通知が届きます。ほかのサーバーと同じく利用権が必要ですが、[プリセットサーバー](/preset-servers)のアカウントを 1 つでも登録していれば無償です（[プッシュ通知について](/push-notification)）。
+- **プライバシーとつながりやすさ**: フォローの承認制・おすすめや検索への掲載・フォロー / フォロワーの一覧の公開範囲などを、設定の画面から変えられます（Mastodon / Misskey）。
+- **フォローボタン**: 承認制のアカウントをフォローしたとき、承認を待っている間は「リクエスト中」と出し、押すとリクエストを取り下げられるようにしました。
+- **Linux**: 2 つ同時に起動できてしまう問題、キーリングが無い・保存に失敗したときの案内と試し直し、Spotify のナウプレで歌手が 1 人目しか出ない問題を直しました。
 
 2.0 はメジャーアップデートで、デッキ表示（マルチカラム）・[プリセットサーバー](/preset-servers)以外への[プッシュ通知](/push-notification)・添付画像のレイヤー編集の 3 つを加えています。
 
-すべての変更は GitHub のリリースページ（[v2.12.0](https://github.com/pooza/capsicum/releases/tag/v2.12.0) / [v2.11.0](https://github.com/pooza/capsicum/releases/tag/v2.11.0) / [v2.10.0](https://github.com/pooza/capsicum/releases/tag/v2.10.0) / [v2.9.0](https://github.com/pooza/capsicum/releases/tag/v2.9.0) / [v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
+すべての変更は GitHub のリリースページ（[v2.13.0](https://github.com/pooza/capsicum/releases/tag/v2.13.0) / [v2.12.0](https://github.com/pooza/capsicum/releases/tag/v2.12.0) / [v2.11.0](https://github.com/pooza/capsicum/releases/tag/v2.11.0) / [v2.10.0](https://github.com/pooza/capsicum/releases/tag/v2.10.0) / [v2.9.0](https://github.com/pooza/capsicum/releases/tag/v2.9.0) / [v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
 
 ### ダウンロード
 
@@ -180,7 +180,7 @@ curl -fsSL https://capsicum.shrieker.net/install.sh | bash
 
 直近では信頼性・使い勝手の改善に継続的に取り組んでいます。詳細は [GitHub Milestones](https://github.com/pooza/capsicum/milestones) をご覧ください。
 
-v2.0 で、予告していた 3 つの柱（デッキ表示・添付画像のレイヤー編集・外部サーバー向けのプッシュ通知）を提供しました。今後は 2.x 系で、不具合の修正・ご要望への対応と、Mastodon / Misskey の機能のうちまだ capsicum から使えないものの追加を続けます。
+v2.0 で、予告していた 3 つの柱（デッキ表示・添付画像のレイヤー編集・外部サーバー向けのプッシュ通知）を提供しました。今後は 2.x 系で、不具合の修正・ご要望への対応と、Mastodon / Misskey / Akkoma の機能のうちまだ capsicum から使えないものの追加を続けます。
 
 ## コミュニティ
 
