@@ -53,6 +53,7 @@ v2.0 より、タイムラインを列として横に並べて表示できます
 - すべてのアカウントのお知らせを、1 つの列でまとめて見られます（v2.9〜）。
 - 間が空いてから投稿するとき、投稿先のアカウントを確かめられます。設定でオンにした人だけに出ます（v2.9〜）。
 - メニューバーの「アカウント」と「移動」は、フォーカス中の列のアカウントで動きます（v2.10〜）。
+- 列が並んで見える広い幅でも、列の一覧を出せます。設定でオンにした人だけに出ます（v2.14〜）。列の一覧の右端から、ロックしていない列をまとめて閉じられます（v2.14〜）。
 
 ### Mastodon/Misskeyの本来機能
 
@@ -86,6 +87,7 @@ v2.0 より、タイムラインを列として横に並べて表示できます
 - Play を「いつもの」（自分の Play といいねした Play）から開けます。検索と、自分の Play の削除もできます（Misskey・v2.9〜）。
 - アイコンデコレーションを選んで付け外しできます（Misskey・v2.9〜）。位置・角度・左右反転も調整できます（v2.11〜）。
 - アンテナを作る・編集する・削除することができます（Misskey・v2.10〜）。
+- ギャラリーを「人気 / 新着」で眺められ、投稿にいいねできます（Misskey・v2.14〜）。
 - 引用の中のリンクとプレビューカードを、そのまま押して開けます（v2.10〜）。
 - クリップを作る・編集する・削除することができます。投稿のメニューから、クリップに入れたり外したりもできます（Misskey・v2.11〜）。
 - [プッシュ通知](/push-notification)
@@ -145,16 +147,18 @@ Pleroma 系（Akkoma）のサーバーは、Mastodon と共通の API の範囲�
 
 ## 最新リリース
 
-**v2.13.0**（2026-11-19）では、Akkoma（Pleroma 系）のサーバーでプッシュ通知が届くようになりました。この版から capsicum を「Mastodon / Misskey / Akkoma クライアント」としてご案内します。あわせて、プライバシーとつながりやすさの設定をアプリから変えられる画面を加えました。全 5 プラットフォーム（iOS・Android・macOS・Windows・Linux）で公開済みです。
+**v2.14.0**（2026-11-23）では、プッシュ通知をアカウントごとにオン / オフできるようになり、複数のアカウントを使っているときは、通知の見出しにどのアカウント宛てかを添えるようにしました。各ストアで順次公開しています。
 
-- **Akkoma のプッシュ通知**: Akkoma のサーバーからもプッシュ通知が届きます。ほかのサーバーと同じく利用権が必要ですが、[プリセットサーバー](/preset-servers)のアカウントを 1 つでも登録していれば無償です（[プッシュ通知について](/push-notification)）。
-- **プライバシーとつながりやすさ**: フォローの承認制・おすすめや検索への掲載・フォロー / フォロワーの一覧の公開範囲などを、設定の画面から変えられます（Mastodon / Misskey）。
-- **フォローボタン**: 承認制のアカウントをフォローしたとき、承認を待っている間は「リクエスト中」と出し、押すとリクエストを取り下げられるようにしました。
-- **Linux**: 2 つ同時に起動できてしまう問題、キーリングが無い・保存に失敗したときの案内と試し直し、Spotify のナウプレで歌手が 1 人目しか出ない問題を直しました。
+- **プッシュ通知のオン / オフ**: 「設定 → プッシュ通知」の各アカウントの行で切り替えられます（[プッシュ通知について](/push-notification)）。
+- **通知の宛先**: 複数のアカウントを登録しているとき、通知の見出しに宛先のアカウントを添えます。
+- **アカウントの削除**: アプリからアカウントを削除したとき、サーバーの「連携アプリ」からも capsicum の承認を取り消すようにしました。
+- **デッキ**: 広い幅でも列の一覧を出せる設定（既定はオフ）と、列の一覧から「ロックしていない列を閉じる」を加えました。
+- **Misskey のギャラリー**: 「人気 / 新着」を切り替えて眺められ、投稿にいいねできます。
+- **Linux**: キーリングがロックされていると、60 秒ごとに解除の画面が出ていた問題を直しました。
 
 2.0 はメジャーアップデートで、デッキ表示（マルチカラム）・[プリセットサーバー](/preset-servers)以外への[プッシュ通知](/push-notification)・添付画像のレイヤー編集の 3 つを加えています。
 
-すべての変更は GitHub のリリースページ（[v2.13.0](https://github.com/pooza/capsicum/releases/tag/v2.13.0) / [v2.12.0](https://github.com/pooza/capsicum/releases/tag/v2.12.0) / [v2.11.0](https://github.com/pooza/capsicum/releases/tag/v2.11.0) / [v2.10.0](https://github.com/pooza/capsicum/releases/tag/v2.10.0) / [v2.9.0](https://github.com/pooza/capsicum/releases/tag/v2.9.0) / [v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
+すべての変更は GitHub のリリースページ（[v2.14.0](https://github.com/pooza/capsicum/releases/tag/v2.14.0) / [v2.13.0](https://github.com/pooza/capsicum/releases/tag/v2.13.0) / [v2.12.0](https://github.com/pooza/capsicum/releases/tag/v2.12.0) / [v2.11.0](https://github.com/pooza/capsicum/releases/tag/v2.11.0) / [v2.10.0](https://github.com/pooza/capsicum/releases/tag/v2.10.0) / [v2.9.0](https://github.com/pooza/capsicum/releases/tag/v2.9.0) / [v2.8.1](https://github.com/pooza/capsicum/releases/tag/v2.8.1) / [v2.8.0](https://github.com/pooza/capsicum/releases/tag/v2.8.0) / [v2.7.0](https://github.com/pooza/capsicum/releases/tag/v2.7.0) / [v2.6.0](https://github.com/pooza/capsicum/releases/tag/v2.6.0) / [v2.5.0](https://github.com/pooza/capsicum/releases/tag/v2.5.0) / [v2.4.1](https://github.com/pooza/capsicum/releases/tag/v2.4.1) / [v2.4.0](https://github.com/pooza/capsicum/releases/tag/v2.4.0) / [v2.3.0](https://github.com/pooza/capsicum/releases/tag/v2.3.0) / [v2.2.0](https://github.com/pooza/capsicum/releases/tag/v2.2.0) / [v2.1.0](https://github.com/pooza/capsicum/releases/tag/v2.1.0) / [v2.0.0](https://github.com/pooza/capsicum/releases/tag/v2.0.0)）にあります。
 
 ### ダウンロード
 
